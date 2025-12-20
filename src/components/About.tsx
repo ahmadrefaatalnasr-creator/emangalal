@@ -8,21 +8,19 @@ const About = () => {
           </h2>
           <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
             <p>
-              Instructional Designer and eLearning Specialist with a strong background in education, 
-              content development, and digital learning strategies. Experienced in designing and 
-              delivering engaging learning solutions that align with organizational goals and adult 
-              learning principles.
+              I specialize in instructional design and storyboarding, with hands-on experience 
+              in developing e-learning content and enhancing interactive educational courses. 
+              My passion lies in creating engaging learning experiences that truly connect with learners.
             </p>
             <p>
-              Skilled in leveraging authoring tools (Articulate, Adobe CC, H5P, etc.), LMS platforms, 
-              and interactive media to create impactful training experiences. Proven expertise in 
-              instructional design models, needs analysis, and learner-centered design with a track 
-              record of building scalable eLearning programs across diverse industries.
+              I am well-versed in the Moodle Learning Management System and proficient in a 
+              comprehensive suite of creative tools including Photoshop, Illustrator, After Effects, 
+              Premiere, Adobe Animate, InDesign, Captivate, and Articulate Storyline.
             </p>
             <p>
-              Adept at collaborating with cross-functional teams, leading content development processes, 
-              and ensuring clarity, engagement, and measurable learning outcomes. Awarded the Ideal 
-              Student for Faculty of Education (2021) and 5th Ideal Student for Egyptian Universities (2019).
+              With a Bachelor's degree in Specific Education specializing in Educational Technology 
+              from Fayoum University, I bring both academic knowledge and practical expertise to 
+              every project I undertake.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Lightbulb, Palette, Code, Users, BookOpen, Layers, Video, MonitorPlay } from 'lucide-react';
+import { Lightbulb, Palette, Video, Layers, BookOpen, MonitorPlay, Wand2, PenTool } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Skills = () => {
@@ -6,42 +6,42 @@ const Skills = () => {
     {
       icon: Lightbulb,
       title: 'Instructional Design',
-      description: 'ADDIE, SAM, Bloom\'s Taxonomy, Kolb, Adult Learning Theories',
+      description: 'Storyboarding, Course Development, Learning Objectives',
     },
     {
-      icon: Code,
-      title: 'E-learning Development',
-      description: 'Articulate Storyline 360, Adobe Captivate, H5P, SCORM, xAPI',
+      icon: PenTool,
+      title: 'Adobe Creative Suite',
+      description: 'Photoshop, Illustrator, InDesign, After Effects, Premiere',
     },
     {
-      icon: Palette,
-      title: 'Multimedia & Graphics',
-      description: 'Photoshop, Illustrator, InDesign, After Effects',
+      icon: Wand2,
+      title: 'E-learning Tools',
+      description: 'Adobe Captivate, Articulate Storyline, Adobe Animate',
     },
     {
       icon: Video,
-      title: 'Video Production',
-      description: 'Camtasia, Video Editing, Storyboarding, vILT',
-    },
-    {
-      icon: Users,
-      title: 'Learning Experience',
-      description: 'Microlearning, Gamification, Assessment & Interactivity',
+      title: 'Motion Graphics',
+      description: 'After Effects, Animation, Video Editing, Premiere Pro',
     },
     {
       icon: Layers,
-      title: 'LMS & Standards',
-      description: 'Moodle, Learning Analytics, WCAG Accessibility',
+      title: 'LMS Platforms',
+      description: 'Moodle, Learning Management Systems, Course Deployment',
     },
     {
       icon: BookOpen,
-      title: 'Content Strategy',
-      description: 'Curriculum Mapping, Needs Analysis, Course Evaluation',
+      title: 'Content Development',
+      description: 'Interactive Courses, Educational Materials, Multimedia Content',
+    },
+    {
+      icon: Palette,
+      title: 'Visual Design',
+      description: 'Graphic Design, UI/UX for Learning, Brand Consistency',
     },
     {
       icon: MonitorPlay,
-      title: 'Business Skills',
-      description: 'Collaboration, Communication, Problem Solving, Presentations',
+      title: 'Interactive Media',
+      description: 'Animations, Simulations, Engaging Digital Experiences',
     },
   ];
 
