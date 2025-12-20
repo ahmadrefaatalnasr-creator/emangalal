@@ -11,7 +11,7 @@ const Skills = () => {
     {
       icon: PenTool,
       title: 'Adobe Creative Suite',
-      description: 'Photoshop, Illustrator, InDesign, After Effects, Premiere',
+      description: 'Photoshop, Illustrator,',
     },
     {
       icon: Wand2,
