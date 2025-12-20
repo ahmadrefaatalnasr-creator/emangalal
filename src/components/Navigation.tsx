@@ -42,9 +42,9 @@ const Navigation = () => {
               e.preventDefault();
               scrollToSection('#home');
             }}
-            className="text-2xl font-bold text-primary hover:text-accent transition-colors"
+            className="text-2xl font-serif font-semibold text-primary hover:text-accent transition-colors"
           >
-            Ahmed
+            Eman Galal
           </a>
 
           {/* Desktop Navigation */}

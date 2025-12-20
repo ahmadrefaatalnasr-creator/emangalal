@@ -46,29 +46,32 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-secondary">
+    <section id="skills" className="py-24 bg-secondary">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
-          Skills & Expertise
-        </h2>
+        <div className="text-center mb-16">
+          <span className="text-accent font-medium tracking-wider uppercase text-sm">What I Do</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mt-2 text-primary">
+            Skills & Expertise
+          </h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
               <Card
                 key={index}
-                className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card/80 backdrop-blur-sm group"
               >
                 <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-accent/10 p-3 rounded-lg">
-                      <Icon className="w-6 h-6 text-accent" />
+                  <div className="flex flex-col items-center text-center gap-4">
+                    <div className="bg-gradient-to-br from-accent/20 to-primary/10 p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-7 h-7 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2 text-primary">
+                      <h3 className="font-serif font-semibold text-lg mb-2 text-primary">
                         {skill.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         {skill.description}
                       </p>
                     </div>

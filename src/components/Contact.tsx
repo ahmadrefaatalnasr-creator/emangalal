@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Phone, FileText } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -30,37 +30,40 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-24 bg-secondary">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary">
-          Get In Touch
-        </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Interested in collaborating or learning more about my work? I'd love to hear from you!
-        </p>
+        <div className="text-center mb-12">
+          <span className="text-accent font-medium tracking-wider uppercase text-sm">Let's Connect</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mt-2 text-primary">
+            Get In Touch
+          </h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            Interested in collaborating or learning more about my work? I'd love to hear from you!
+          </p>
+        </div>
         
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {contactInfo.map((item, index) => {
               const Icon = item.icon;
               return (
-                <Card key={index} className="border-none shadow-md">
+                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur-sm group">
                   <CardContent className="p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-6 h-6 text-accent" />
                     </div>
-                    <h3 className="font-semibold mb-2 text-primary">{item.label}</h3>
+                    <h3 className="font-serif font-semibold mb-2 text-primary">{item.label}</h3>
                     {item.link ? (
                       <a 
                         href={item.link} 
-                        className="text-xs md:text-sm text-muted-foreground hover:text-accent transition-colors"
+                        className="text-sm text-muted-foreground hover:text-accent transition-colors"
                         target={item.link.startsWith('http') ? '_blank' : undefined}
                         rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground">{item.value}</p>
+                      <p className="text-sm text-muted-foreground">{item.value}</p>
                     )}
                   </CardContent>
                 </Card>
@@ -71,7 +74,7 @@ const Contact = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" 
               onClick={() => window.open('mailto:eg1218@fayoum.edu.eg')}
             >
               <Mail className="mr-2 w-5 h-5" />
