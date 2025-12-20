@@ -5,29 +5,28 @@ import { Button } from '@/components/ui/button';
 const Portfolio = () => {
   const projects = [
     {
-      title: 'ASTRO Interactive Course',
-      description: 'Interactive e-learning course built with Articulate Storyline, featuring engaging multimedia content, assessments, and learner-centered design principles.',
+      title: 'Interactive Moodle Course Design',
+      description: 'Designed and developed a comprehensive e-learning course on Moodle LMS featuring interactive quizzes, multimedia content, and engaging learning paths.',
+      category: 'LMS Development',
+      tools: 'Moodle, Adobe Captivate',
+    },
+    {
+      title: 'Motion Graphics for Education',
+      description: 'Created animated explainer videos and motion graphics for educational content using After Effects and Premiere Pro with custom illustrations.',
+      category: 'Motion Graphics',
+      tools: 'After Effects, Premiere, Illustrator',
+    },
+    {
+      title: 'Articulate Storyline Module',
+      description: 'Built an interactive training module with branching scenarios, custom characters, and gamification elements for enhanced learner engagement.',
       category: 'E-learning Development',
-      tools: 'Articulate Storyline 360',
-      link: 'https://ahmadrefaat2024.github.io/ASTRO/',
+      tools: 'Articulate Storyline, Photoshop',
     },
     {
-      title: 'Corporate Leadership Training',
-      description: 'Comprehensive e-learning program for developing leadership skills with scenario-based learning and real-world applications using ADDIE methodology.',
-      category: 'Corporate Training',
-      tools: 'Articulate 360, Adobe Illustrator',
-    },
-    {
-      title: 'Youth Education Program',
-      description: 'Video-based courses designed for teens and children with age-appropriate pacing, visual storytelling, and curriculum mapping techniques.',
-      category: 'Youth Education',
-      tools: 'Camtasia, H5P, Video Production',
-    },
-    {
-      title: 'Blended Learning Solutions',
-      description: 'Custom eLearning modules and blended learning programs with interactive content, accessibility compliance (WCAG), and responsive design.',
-      category: 'Blended Learning',
-      tools: 'Articulate Storyline, H5P, LMS',
+      title: 'Digital Storyboard Collection',
+      description: 'Developed detailed storyboards and visual scripts for educational video courses, ensuring smooth narration flow and visual consistency.',
+      category: 'Instructional Design',
+      tools: 'InDesign, Illustrator, Adobe Animate',
     },
   ];
 
@@ -65,12 +64,12 @@ const Portfolio = () => {
                   <span className="text-sm text-muted-foreground">
                     {project.tools}
                   </span>
-                  {project.link && (
+                  {(project as any).link && (
                     <Button
                       variant="ghost"
                       size="sm"
                       className="text-accent hover:text-accent/80"
-                      onClick={() => window.open(project.link, '_blank')}
+                      onClick={() => window.open((project as any).link, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4" />
                     </Button>
