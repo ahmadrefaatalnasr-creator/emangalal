@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, FileText } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Phone, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -7,19 +7,25 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'ahmadrefaatalnasr@gmail.com',
-      link: 'mailto:ahmadrefaatalnasr@gmail.com'
+      value: 'eg1218@fayoum.edu.eg',
+      link: 'mailto:eg1218@fayoum.edu.eg'
+    },
+    {
+      icon: Phone,
+      label: 'Phone',
+      value: '01017126590',
+      link: 'tel:+201017126590'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Egypt'
+      value: 'Al-Fayoum, Egypt'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'Connect with me',
-      link: 'https://www.linkedin.com/in/ahmadrefaatalnasr/'
+      link: 'https://www.linkedin.com/in/eman-galal-68a169283/'
     }
   ];
 
@@ -34,7 +40,7 @@ const Contact = () => {
         </p>
         
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {contactInfo.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -47,7 +53,9 @@ const Contact = () => {
                     {item.link ? (
                       <a 
                         href={item.link} 
-                        className="text-xs md:text-sm text-muted-foreground hover:text-accent transition-colors whitespace-nowrap"
+                        className="text-xs md:text-sm text-muted-foreground hover:text-accent transition-colors"
+                        target={item.link.startsWith('http') ? '_blank' : undefined}
+                        rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
                         {item.value}
                       </a>
@@ -64,14 +72,10 @@ const Contact = () => {
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8" 
-              onClick={() => window.open('mailto:ahmadrefaatalnasr@gmail.com')}
+              onClick={() => window.open('mailto:eg1218@fayoum.edu.eg')}
             >
               <Mail className="mr-2 w-5 h-5" />
               Send me an email
-            </Button>
-            <Button size="lg" variant="outline" className="ml-4 font-semibold px-8">
-              <FileText className="mr-2 w-5 h-5" />
-              Download CV
             </Button>
           </div>
         </div>
