@@ -32,37 +32,43 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-background">
+    <section id="experience" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
-          Experience
-        </h2>
+        <div className="text-center mb-16">
+          <span className="text-accent font-medium tracking-wider uppercase text-sm">My Journey</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mt-2 text-primary">
+            Experience
+          </h2>
+        </div>
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-8 mb-16">
+          <div className="space-y-8 mb-20">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="relative pl-8 border-l-2 border-accent pb-8 last:pb-0 animate-fade-in"
+                className="relative pl-8 border-l-2 border-accent/50 pb-8 last:pb-0 animate-fade-in hover:border-accent transition-colors"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent" />
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent shadow-lg shadow-accent/30" />
                 <div className="flex items-center gap-2 mb-2">
                   <Briefcase className="w-5 h-5 text-accent" />
                   <span className="text-sm font-semibold text-accent">{exp.year}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-1 text-primary">{exp.title}</h3>
+                <h3 className="text-xl font-serif font-bold mb-1 text-primary">{exp.title}</h3>
                 <p className="text-muted-foreground font-medium mb-3">{exp.company}</p>
                 <p className="text-foreground/90 leading-relaxed">{exp.description}</p>
               </div>
             ))}
           </div>
 
-          <h3 className="text-3xl font-bold text-center mb-8 text-primary">Education</h3>
+          <div className="text-center mb-12">
+            <span className="text-primary/70 font-medium tracking-wider uppercase text-sm">Academic Background</span>
+            <h3 className="text-3xl font-serif font-bold mt-2 text-primary">Education</h3>
+          </div>
           <div className="space-y-8">
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="relative pl-8 border-l-2 border-primary/30 pb-8 last:pb-0 animate-fade-in"
+                className="relative pl-8 border-l-2 border-primary/30 pb-8 last:pb-0 animate-fade-in hover:border-primary/60 transition-colors"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary/50" />
@@ -70,7 +76,7 @@ const Experience = () => {
                   <GraduationCap className="w-5 h-5 text-primary" />
                   <span className="text-sm font-semibold text-primary">{edu.year}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-1 text-primary">{edu.title}</h3>
+                <h3 className="text-xl font-serif font-bold mb-1 text-primary">{edu.title}</h3>
                 <p className="text-muted-foreground font-medium mb-3">{edu.institution}</p>
                 <p className="text-foreground/90 leading-relaxed">{edu.description}</p>
               </div>
